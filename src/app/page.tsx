@@ -79,10 +79,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div>
-          
+      <section className="py-24 px-8">
+       <div className="flex flex-col md:flex-row items-start gap-16 max-w-7xl mx-auto">
+        <div className="md:w-1/2">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8 text-center md:text-left">
+             Hello, I'm Mudra. <br/>
+             Nice to meet you!
+          </h2>
+          <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-8 text-center md:text-left">
+            Welcome to my portfolio.
+          </h2>
+          <div className="space-y-8 text-base text-[--muted-foreground] leading-relaxed mb-16 text-center md:text-left">
+            <p className="text-lg mb-10">"What unites people? Armies? Gold? Flags? Stories." -Tyrion Lannister <br/>
+            As much as it pains me to say, Tryion got one thing right in Season 8 of Game of Thrones. People are fascinated by stories. They're captivating, and everyone -- irrespective of age, language, or otherwise --
+            is fascinated by them; whether it is through traditional arts, novels, or video games. When I decided to pursue Data Science at Boston University, I came in with a goal in mind, to 
+            learn the world of data and computing in order to tell stories through passion projects on a small scale, and when I enter the industry, through datasets on a global scale. 
+            </p>
+            <p className="text-lg">My latest project consists of pulling data from NASA Horizons and cleaning it for the frontend to use in animating accurate Near-Earth Objects using Python and Three.js. 
+              need to add a lot more here just to kinda match it but styling can obciously come later. 
+            </p>
+          </div>
         </div>
+        <div className="md:w-1/2 flex justify-center items-start">
+          <img src="/professional-2.jpg" alt="A portrait of Mudra Patel, photographed by Ashley Lau." className="object-contain w-full h-full max-h-[625px]"></img>
+        </div>
+       </div>
       </section>
     </main>
   );
