@@ -82,7 +82,7 @@ export default function Home() {
       <section className="py-24 px-8">
        <div className="flex flex-col md:flex-row items-start gap-16 max-w-7xl mx-auto">
         <div className="md:w-1/2">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8 text-center md:text-left">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8 text-center md:text-left text-[--foreground]">
              Hello, I'm Mudra. <br/>
              Nice to meet you!
           </h2>
