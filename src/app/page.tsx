@@ -8,11 +8,11 @@ const dmSans = DM_Sans({
 
 export default function Home() {
   return (
-    <main>
-      <section className="h-screen w-full relative">
+    <main className="relative">
+      <section id="home" className="h-screen w-full relative">
 
         <Image src="/landingpage.jpg" alt="background image" layout="fill" objectFit="cover" className="-z-10" quality={100} priority sizes="100vw"/>
-        <div className="absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/4 md:left-90 md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0">
+        <div className="absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/5 md:bottom-auto md:left-19/80 md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0">
           <h1 className="hidden md:block text-6xl md:text-9xl font-extrabold leading-none">
           Mudra<br />
           Patel
@@ -22,7 +22,7 @@ export default function Home() {
           </h1> 
         </div>
 
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-11/12 text-center text-white md:top-auto md:left-189 md:bottom-73 md:right-20 md:w-auto md:translate-x-0 md:text-left">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-11/12 text-center text-white md:top-auto md:left-11/20 md:bottom-15/48 md:right-20 md:w-auto md:translate-x-0 md:text-left">
           <p className="hidden md:block text-2xl font-semibold">
             Personal Statement Undecided <br />
             something tech
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 px-8">
+      <section id="about" className="py-24 px-8 bg-[--background] min-h-screen">
        <div className="flex flex-col md:flex-row items-start gap-16 max-w-7xl mx-auto">
         <div className="md:w-1/2">
           <h2 className={`text-4xl md:text-5xl font-bold leading-tight mb-8 text-center md:text-left text-[#181717] ${dmSans.className}`}>
@@ -60,13 +60,15 @@ export default function Home() {
             is fascinated by them; whether it is through traditional arts, novels, or video games. When I decided to pursue Data Science at Boston University, I came in with a goal in mind, to 
             learn the world of data and computing in order to tell stories through passion projects on a small scale, and when I enter the industry, through datasets on a global scale. 
             </p>
-            <p className="text-lg">My latest project consists of pulling data from NASA Horizons and cleaning it for the frontend to use in animating accurate Near-Earth Objects using Python and Three.js. 
-              need to add a lot more here just to kinda match it but styling can obciously come later. 
+            <p className="text-lg">My journey into the tech space started at the age of nine, when my family moved from Gujarat, India, to the Bay Area.
+              At that young age, I had no idea how special a place the silicon valley was, nor could I comprehend how lucky I was to grow up in such a culturally diverse place.
+              As I grew up, my interests naturally gravitated towards STEM topics, and computers in particular -- which led me to pursue Computer Science into college, and finally, Data Science 
+              as I transfered into Boston University.  
             </p>
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center items-start">
-          <img src="/professional-2.jpg" alt="A portrait of Mudra Patel, photographed by Ashley Lau." className="object-contain w-full h-full max-h-[625px]"></img>
+          <img src="/professional-2.jpg" alt="A portrait of Mudra Patel, photographed by Ashley Lau." className="object-contain w-full h-full max-h-[716px]"></img>
         </div>
        </div>
       </section>
