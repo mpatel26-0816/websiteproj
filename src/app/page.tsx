@@ -9,7 +9,7 @@ const dmSans = DM_Sans({
 export default function Home() {
   return (
     <main className="relative">
-      <section id="home" className="h-screen w-full relative">
+      <section id="home" className="h-screen w-full relative snap-start">
 
         <Image src="/landingpage.jpg" alt="background image" layout="fill" objectFit="cover" className="opacity-0 fade-in-image -z-10" quality={100} priority sizes="100vw "/>
         <div className="opacity-0 animate-[fadeInRight_1s_ease-out_0.33s_forwards] absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/5 md:bottom-auto md:left-[calc(23.75%+20px)] md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0">
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-24 px-8 bg-[--background] min-h-screen">
+      <section id="about" className="py-24 px-8 bg-[--background] min-h-screen snap-start">
        <div className="flex flex-col md:flex-row items-start gap-16 max-w-7xl mx-auto">
         <div className="md:w-1/2">
           <h2 className={`text-4xl md:text-5xl font-bold leading-tight mb-8 text-center md:text-left text-[#181717] ${dmSans.className}`}>
@@ -72,6 +72,242 @@ export default function Home() {
         </div>
        </div>
       </section>
+
+      <section id="projects" className="py-24 px-8 font-dmsans bg-[--background]">
+        <div className="max-w-7xl mx-auto">
+          <h2 className={`text-4xl md:text-5xl font-bold text-center md:text-left mb-16 ${dmSans.className}`}>
+            Projects
+          </h2>
+          {/* Single grid container for all project cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Project 1 */}
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+                <div className="bg-gray-300 h-80 w-full mb-4"></div>
+                <div>
+                  <h3 className="font-bold text-lg uppercase text-[--foreground]">
+                    Name and title of project
+                  </h3>
+                  <p className="text-base text-[--muted-foreground]">
+                    This will be the description of the project, could be few sentences
+                  </p>
+                </div>
+              </div>
+
+            {/* Project 2 */}
+            <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+              {/* Image Placeholder */}
+              <div className="bg-gray-300 h-80 w-full mb-4 rounded-md"></div>
+
+              {/* Text Content */}
+              <div>
+                <h3 className="font-bold text-lg uppercase text-[--foreground]">
+                  Name and title of project
+                </h3>
+                <p className="text-base text-[--muted-foreground]">
+                  This will be the description of the project, could be few sentences
+                </p>
+              </div>
+            </div>
+
+            {/* Project 3 */}
+            <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+              <div className="bg-gray-300 h-80 w-full mb-4"></div>
+              <div>
+                <h3 className="font-bold text-lg uppercase text-[--foreground]">
+                  Name and title of project
+                </h3>
+                <p className="text-base text-[--muted-foreground]">
+                  This will be the description of the project, could be few sentences
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* <section id="skills" className="py-24 px-8 font-dmsans bg-[--background]">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          My Toolkit
+        </h2>
+        <div className="[prespective:1000px]">
+          <div className="flex flex-col gap-4 animate-[scroll-vertical_40s_linear_infinite] [transform-style:preserve-3d] [transform:rotateY(-15deg)]">
+            <div className="flex flex-col items-center gap-4 text-2xl text-[--muted-foreground]">
+              <div>Python</div>
+              <div>Adobe CC</div>
+              <div>Next.js</div>
+              <div>Three.js</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Pandas</div>
+              <div>NumPy</div>
+              <div>C++</div>
+              <div>MongoDB</div>
+              <div>Azure</div>
+              <div>Git</div>
+              <div>JavaScript</div>
+              <div>Plotly Dash</div>
+              <div>Matplotlib</div>
+              <div>Figma</div>
+              <div>Rust</div>
+              <div>MS 365</div>
+            </div>
+
+            <div className="flex flex-col items-center gap-4 text-2xl text-[--muted-foreground]">
+              <div>Python</div>
+              <div>Adobe CC</div>
+              <div>Next.js</div>
+              <div>Three.js</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Pandas</div>
+              <div>NumPy</div>
+              <div>C++</div>
+              <div>MongoDB</div>
+              <div>Azure</div>
+              <div>Git</div>
+              <div>JavaScript</div>
+              <div>Plotly Dash</div>
+              <div>Matplotlib</div>
+              <div>Figma</div>
+              <div>Rust</div>
+              <div>MS 365</div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4 animate-[scroll-vertical_30s_linear_infinite] [transform-style:preserve-3d] [transform:rotateY(-5deg)]">
+            <div className="flex flex-col items-center gap-4 text-2xl text-[--muted-foreground]">
+              <div>Python</div>
+              <div>Adobe CC</div>
+              <div>Next.js</div>
+              <div>Three.js</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Pandas</div>
+              <div>NumPy</div>
+              <div>C++</div>
+              <div>MongoDB</div>
+              <div>Azure</div>
+              <div>Git</div>
+              <div>JavaScript</div>
+              <div>Plotly Dash</div>
+              <div>Matplotlib</div>
+              <div>Figma</div>
+              <div>Rust</div>
+              <div>MS 365</div>
+            </div>
+
+            <div className="flex flex-col items-center gap-4 text-2xl text-[--muted-foreground]">
+              <div>Python</div>
+              <div>Adobe CC</div>
+              <div>Next.js</div>
+              <div>Three.js</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Pandas</div>
+              <div>NumPy</div>
+              <div>C++</div>
+              <div>MongoDB</div>
+              <div>Azure</div>
+              <div>Git</div>
+              <div>JavaScript</div>
+              <div>Plotly Dash</div>
+              <div>Matplotlib</div>
+              <div>Figma</div>
+              <div>Rust</div>
+              <div>MS 365</div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4 animate-[scroll-vertical_18s_linear_infinite] [transform-style:preserve-3d] [transform:rotateY(5deg)]">
+            <div className="flex flex-col items-center gap-4 text-2xl text-[--muted-foreground]">
+              <div>Python</div>
+              <div>Adobe CC</div>
+              <div>Next.js</div>
+              <div>Three.js</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Pandas</div>
+              <div>NumPy</div>
+              <div>C++</div>
+              <div>MongoDB</div>
+              <div>Azure</div>
+              <div>Git</div>
+              <div>JavaScript</div>
+              <div>Plotly Dash</div>
+              <div>Matplotlib</div>
+              <div>Figma</div>
+              <div>Rust</div>
+              <div>MS 365</div>
+            </div>
+
+            <div className="flex flex-col items-center gap-4 text-2xl text-[--muted-foreground]">
+              <div>Python</div>
+              <div>Adobe CC</div>
+              <div>Next.js</div>
+              <div>Three.js</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Pandas</div>
+              <div>NumPy</div>
+              <div>C++</div>
+              <div>MongoDB</div>
+              <div>Azure</div>
+              <div>Git</div>
+              <div>JavaScript</div>
+              <div>Plotly Dash</div>
+              <div>Matplotlib</div>
+              <div>Figma</div>
+              <div>Rust</div>
+              <div>MS 365</div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4 animate-[scroll-vertical_17s_linear_infinite] [transform-style:preserve-3d] [transform:rotateY(15deg)]">
+            <div className="flex flex-col items-center gap-4 text-2xl text-[--muted-foreground]">
+              <div>Python</div>
+              <div>Adobe CC</div>
+              <div>Next.js</div>
+              <div>Three.js</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Pandas</div>
+              <div>NumPy</div>
+              <div>C++</div>
+              <div>MongoDB</div>
+              <div>Azure</div>
+              <div>Git</div>
+              <div>JavaScript</div>
+              <div>Plotly Dash</div>
+              <div>Matplotlib</div>
+              <div>Figma</div>
+              <div>Rust</div>
+              <div>MS 365</div>
+            </div>
+
+            <div className="flex flex-col items-center gap-4 text-2xl text-[--muted-foreground]">
+              <div>Python</div>
+              <div>Adobe CC</div>
+              <div>Next.js</div>
+              <div>Three.js</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>Pandas</div>
+              <div>NumPy</div>
+              <div>C++</div>
+              <div>MongoDB</div>
+              <div>Azure</div>
+              <div>Git</div>
+              <div>JavaScript</div>
+              <div>Plotly Dash</div>
+              <div>Matplotlib</div>
+              <div>Figma</div>
+              <div>Rust</div>
+              <div>MS 365</div>
+            </div>
+          </div>
+        </div>
+      </section> */}
     </main>
   );
 }

@@ -26,3 +26,8 @@ body {
 
 .fade-in-image{
   animation: image-fade 1.1s ease-in-out 0s forwards;}
+
+@keyframes scroll-horizontal{
+  from {transform: translateX(0);}
+  to {transform: translateX(-100%);}
+}
