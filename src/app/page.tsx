@@ -125,6 +125,10 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="contact">
+        
+      </section>
+
 
       {/* <section id="skills" className="py-24 px-8 font-dmsans bg-[--background]">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
