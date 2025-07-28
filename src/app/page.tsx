@@ -126,6 +126,10 @@ export default function Home() {
       </section>
 
       <section id="contact">
+
+      </section>
+
+      <section id="footer">
         
       </section>
 
