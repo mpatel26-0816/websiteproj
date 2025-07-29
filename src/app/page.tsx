@@ -1,5 +1,21 @@
 import Image from "next/image";
 import { DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
+
+const avegas = localFont({
+  src: [
+    {
+      path: '../../fonts/AvegasRoyale-italic.ttf',
+      weight:"400",
+    },
+    {path: "../../fonts/AvegasRoyale-regular.ttf",
+     weight: "700",
+    },
+    {path: "../../fonts/AvegasRoyale-Bolditalic.ttf",
+     weight: "700",
+    },
+  ],
+});
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -12,7 +28,7 @@ export default function Home() {
       <section id="home" className="h-screen w-full relative snap-start">
 
         <Image src="/landingpage.jpg" alt="background image" layout="fill" objectFit="cover" className="opacity-0 fade-in-image -z-10" quality={100} priority sizes="100vw "/>
-        <div className="opacity-0 animate-[fadeInRight_1s_ease-out_0.33s_forwards] absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/5 md:bottom-auto md:left-[calc(23.75%+20px)] md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0">
+        <div className={`opacity-0 animate-[fadeInRight_1s_ease-out_0.33s_forwards] absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/5 md:bottom-auto md:left-[calc(23.75%+20px)] md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0 ${avegas.className}`}>
           <h1 className="hidden md:block text-6xl md:text-9xl font-extrabold leading-none">
           Mudra<br />
           Patel
@@ -22,18 +38,18 @@ export default function Home() {
           </h1> 
         </div>
 
-        <div className="opacity-0 animate-[fadeInLeft_1s_ease-out_0.46s_forwards] absolute top-1/4 left-1/2 -translate-x-1/2 w-11/12 text-center text-white md:top-auto md:left-11/20 md:bottom-15/48 md:right-20 md:w-auto md:translate-x-0 md:text-left">
-          <p className="hidden md:block text-2xl font-semibold">
-            Personal Statement Undecided <br />
-            something tech
+        <div className={`opacity-0 animate-[fadeInLeft_1s_ease-out_0.46s_forwards] absolute top-1/4 left-1/2 -translate-x-1/2 w-11/12 text-center text-white md:top-auto md:left-11/20 md:bottom-15/48 md:right-20 md:w-auto md:translate-x-0 md:text-left ${avegas.className}`}>
+        <p className="hidden md:block text-2xl font-bold [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
+            The world is full of data, <br />
+            Let's make it speak.
           </p>
-          <p className="block md:hidden text-base font-semibold">
+          <p className="block md:hidden text-base font-bold [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
             Personal Statement Undecided something tech
           </p>
         </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex justify-center text-white opacity-0.5 fade-in-image"> {/*for the pointer arrow (now sure if keeping) */}
-          <p className="font-semibold text-white animate-bounce absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center whitespace-nowrap">
+          <p className={`font-semibold text-white animate-bounce absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center whitespace-nowrap ${avegas.className}`}>
             scroll below
           </p>
           <svg className="w-8 h-8 animate-bounce" fill="none" stroke="currentColor"
@@ -80,8 +96,8 @@ export default function Home() {
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Project 1 */}
-              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
-                <div className="bg-gray-300 h-80 w-full mb-4"></div>
+              <div className="bg-gradient-to-br from-#A3B1C6 to-#A3B1C6 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+                <div className="bg-stone-600 h-80 w-full mb-4"></div>
                 <div>
                   <h3 className="font-bold text-lg uppercase text-[--foreground]">
                     Name and title of project
@@ -92,9 +108,9 @@ export default function Home() {
                 </div>
               </div>
             {/* Project 2 */}
-            <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+            <div className="bg-gradient-to-br from-E3D5C7 to-E3D5C7 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
               {/* Image Placeholder */}
-              <div className="bg-gray-300 h-80 w-full mb-4 rounded-md"></div>
+              <div className="bg-stone-500 h-80 w-full mb-4 rounded-md"></div>
               <div>
                 <h3 className="font-bold text-lg uppercase text-[--foreground]">
                   Name and title of project
@@ -105,8 +121,8 @@ export default function Home() {
               </div>
             </div>
             {/* Project 3 */}
-            <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
-              <div className="bg-gray-300 h-80 w-full mb-4"></div>
+            <div className="bg-gradient-to-br from-#D1C7BD to-#D1C7BD p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+              <div className="bg-stone-400 h-80 w-full mb-4"></div>
               <div>
                 <h3 className="font-bold text-lg uppercase text-[--foreground]">
                   Name and title of project
@@ -152,7 +168,7 @@ export default function Home() {
               </div>
               <div className="text-center md:text-right text-xs text-[--muted-foreground]">
                   <p>Design and developed by Mudra Patel <br/> </p>
-                  <p>in California</p>
+                  <p>in Santa Clara, California</p>
               </div>
           </div>
       </section>
