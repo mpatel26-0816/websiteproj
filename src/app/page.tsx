@@ -46,7 +46,7 @@ export default function Home() {
 
       <section id="about" className="py-24 px-8 bg-[--background] min-h-screen snap-start">
        <div className="flex flex-col md:flex-row items-start gap-16 max-w-7xl mx-auto">
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 md:px-0 px-8">
           <h2 className={`text-4xl md:text-5xl font-bold leading-tight mb-8 text-center md:text-left text-[#181717] ${dmSans.className}`}>
              Hello, I'm Mudra. <br/>
              Nice to meet you!
@@ -67,7 +67,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center items-start">
+        <div className="md:w-1/2 flex justify-center items-start px-14 md:px-0">
           <img src="/professional-2.jpg" alt="A portrait of Mudra Patel, photographed by Ashley Lau." className="object-contain w-full h-full max-h-[716px]"></img>
         </div>
        </div>
@@ -78,7 +78,6 @@ export default function Home() {
           <h2 className={`text-4xl md:text-5xl font-bold text-center md:text-left mb-16 ${dmSans.className}`}>
             Projects
           </h2>
-          {/* Single grid container for all project cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Project 1 */}
               <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
@@ -92,13 +91,10 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-
             {/* Project 2 */}
             <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
               {/* Image Placeholder */}
               <div className="bg-gray-300 h-80 w-full mb-4 rounded-md"></div>
-
-              {/* Text Content */}
               <div>
                 <h3 className="font-bold text-lg uppercase text-[--foreground]">
                   Name and title of project
@@ -108,7 +104,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
             {/* Project 3 */}
             <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
               <div className="bg-gray-300 h-80 w-full mb-4"></div>
@@ -125,12 +120,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact">
-
-      </section>
-
-      <section id="footer">
-
+      <section id="contact" className="bg-[--background] px-8 py-12 snap-start min-h-screen flex flex-col justify-between">
+          <div className="flex justify-between items-center">
+              <p className="text-[--muted-foreground]">&copy; 2025</p>
+              <a href="#home" className="group flex items-center gap-2 text-sm font-semibold tracking-wider text-[--muted-foreground] transition-colors hover:text-[--foreground]">
+                  <span>BACK TO TOP</span>
+                  <span className="bg-[#181717] text-white rounded-full p-2 transition-transform group-hover:-translate-y-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 11l7-7 7 7" />
+                      </svg>
+                  </span>
+              </a>
+          </div>
+          <div className="text-center">
+              <p className="mb-4 text-sm font-semibold tracking-wider text-[--muted-foreground]">HAVE A PROJECT IN MIND?</p>
+              <h2 className="font-bold text-8xl md:text-[10rem] lg:text-[14rem] text-shadow-green-400 tracking-tighter leading-none">
+                  LET'S TALK
+              </h2>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+                      GITHUB
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+                      LINKEDIN
+                  </a>
+                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+                      RESUME
+                  </a>
+              </div>
+              <div className="text-center md:text-right text-xs text-[--muted-foreground]">
+                  <p>Design and developed by Mudra Patel <br/> </p>
+                  <p>in California</p>
+              </div>
+          </div>
       </section>
     </main>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "./navbar";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -19,7 +20,10 @@ export default function RootLayout({
 }: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${dmSans.variable} scroll-smooth snap-y snap-proximity`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Navbar />
+        {children}
+        </body>
     </html>
   );
 }
