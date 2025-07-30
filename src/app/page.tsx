@@ -1,6 +1,19 @@
+"use client";
 import Image from "next/image";
 import { DM_Sans } from "next/font/google";
 import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
+import giaza from "next/font/local";
+import { useState } from 'react';
+
+const giazafont = giaza({
+  src: [
+    {
+      path: '../../fonts/Giza.otf',
+      weight:"400",
+    },
+  ],
+});
 
 const avegas = localFont({
   src: [
@@ -17,18 +30,33 @@ const avegas = localFont({
   ],
 });
 
+const monst = Montserrat({
+  variable: "--font-mon",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
 
 export default function Home() {
+  const [isHovering, setIsHovering] = useState(false);
+  const [copySuccess, setCopySuccess] = useState('');
+  const handleCopyEmail = () => {
+    const email = 'patelmudra2004@gmai.com';
+    navigator.clipboard.writeText(email).then(() => {
+      setCopySuccess('copied to clipboard!');
+      setTimeout(() => setCopySuccess(''), 2000);
+    })
+  }
   return (
     <main className="relative">
       <section id="home" className="h-screen w-full relative snap-start">
 
         <Image src="/landingpage.jpg" alt="background image" layout="fill" objectFit="cover" className="opacity-0 fade-in-image -z-10" quality={100} priority sizes="100vw "/>
-        <div className={`opacity-0 animate-[fadeInRight_1s_ease-out_0.33s_forwards] absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/5 md:bottom-auto md:left-[calc(23.75%+20px)] md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0 ${avegas.className}`}>
+        <div className={`opacity-0 animate-[fadeInRight_1s_ease-out_0.33s_forwards] absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/5 md:bottom-auto md:left-[calc(23.75%+20px)] md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0 ${monst.className}`}>
           <h1 className="hidden md:block text-6xl md:text-9xl font-extrabold leading-none">
           Mudra<br />
           Patel
@@ -38,18 +66,18 @@ export default function Home() {
           </h1> 
         </div>
 
-        <div className={`opacity-0 animate-[fadeInLeft_1s_ease-out_0.46s_forwards] absolute top-1/4 left-1/2 -translate-x-1/2 w-11/12 text-center text-white md:top-auto md:left-11/20 md:bottom-15/48 md:right-20 md:w-auto md:translate-x-0 md:text-left ${avegas.className}`}>
-        <p className="hidden md:block text-2xl font-bold [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
+        <div className={`opacity-0 animate-[fadeInLeft_1s_ease-out_0.46s_forwards] absolute top-1/4 left-1/2 -translate-x-1/2 w-11/12 text-center text-white md:top-auto md:left-11/20 md:bottom-15/48 md:right-20 md:w-auto md:translate-x-0 md:text-left ${monst.className}`}>
+        <p className="hidden md:block text-2xl font-extrabold">
             The world is full of data, <br />
             Let's make it speak.
           </p>
-          <p className="block md:hidden text-base font-bold [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
+          <p className="block md:hidden text-base font-bold">
             Personal Statement Undecided something tech
           </p>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex justify-center text-white opacity-0.5 fade-in-image"> {/*for the pointer arrow (now sure if keeping) */}
-          <p className={`font-semibold text-white animate-bounce absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center whitespace-nowrap ${avegas.className}`}>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex justify-center text-white opacity-0.5 fade-in-image"> 
+          <p className={`font-semibold text-white animate-bounce absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center whitespace-nowrap `}>
             scroll below
           </p>
           <svg className="w-8 h-8 animate-bounce" fill="none" stroke="currentColor"
@@ -96,7 +124,7 @@ export default function Home() {
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Project 1 */}
-              <div className="bg-gradient-to-br from-#A3B1C6 to-#A3B1C6 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+              <div className="bg-gradient-to-br from-#A3B1C6 to-#A3B1C6 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed] ${dmSans.className}">
                 <div className="bg-stone-600 h-80 w-full mb-4"></div>
                 <div>
                   <h3 className="font-bold text-lg uppercase text-[--foreground]">
@@ -108,7 +136,7 @@ export default function Home() {
                 </div>
               </div>
             {/* Project 2 */}
-            <div className="bg-gradient-to-br from-E3D5C7 to-E3D5C7 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+            <div className="bg-gradient-to-br from-E3D5C7 to-E3D5C7 p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed] ${dmSans.className}">
               {/* Image Placeholder */}
               <div className="bg-stone-500 h-80 w-full mb-4 rounded-md"></div>
               <div>
@@ -121,10 +149,10 @@ export default function Home() {
               </div>
             </div>
             {/* Project 3 */}
-            <div className="bg-gradient-to-br from-#D1C7BD to-#D1C7BD p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed]">
+            <div className="bg-gradient-to-br from-#D1C7BD to-#D1C7BD p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer [background-attachment:fixed] ${dmSans.className}">
               <div className="bg-stone-400 h-80 w-full mb-4"></div>
               <div>
-                <h3 className="font-bold text-lg uppercase text-[--foreground]">
+                <h3 className="font-bold text-lg uppercase text-[--foreground] ${dmSans.className}">
                   Name and title of project
                 </h3>
                 <p className="text-base text-[--muted-foreground]">
@@ -138,10 +166,12 @@ export default function Home() {
 
       <section id="contact" className="bg-[--background] px-8 py-12 snap-start min-h-screen flex flex-col justify-between">
           <div className="flex justify-between items-center">
-              <p className="text-[--muted-foreground]">&copy; 2025</p>
-              <a href="#home" className="group flex items-center gap-2 text-sm font-semibold tracking-wider text-[--muted-foreground] transition-colors hover:text-[--foreground]">
+          <div className={`${giazafont.className} text-5xl lowercase tracking-tighter`}>
+              mudrapatel
+            </div>
+              <a href="#home" className={`${giazafont.className} group flex items-center gap-2 text-lg font-extrabold tracking-wider text-[--muted-foreground] transition-colors hover:text-[--foreground]`}>
                   <span>BACK TO TOP</span>
-                  <span className="bg-[#181717] text-white rounded-full p-2 transition-transform group-hover:-translate-y-1">
+                  <span className="bg-[#181717] text-white rounded-full p-2 transition-transform group-hover:-translate-y-3">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 11l7-7 7 7" />
                       </svg>
@@ -149,25 +179,37 @@ export default function Home() {
               </a>
           </div>
           <div className="text-center">
-              <p className="mb-4 text-sm font-semibold tracking-wider text-[--muted-foreground]">HAVE A PROJECT IN MIND?</p>
-              <h2 className="font-bold text-8xl md:text-[10rem] lg:text-[14rem] text-shadow-green-400 tracking-tighter leading-none">
-                  LET'S TALK
+              <p className="mb-4 text-2xl font-semibold tracking-wider text-[--muted-foreground] -translate-x-px">HAVE A STORY IN MIND?</p>
+              <h2 className={`font-bold text-8xl md:text-[10rem] lg:text-[14rem] text-shadow-green-400 tracking-tighter leading-none ${giazafont.className}`}>
+                  Let's Talk
               </h2>
+              <div className="mt-12 flex justify-center items-center gap-5 relative">
+                <a href="tel:123-456-7890" className="border border-gray-400 rounded-full px-6 py-3 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+                  (408) 747-7179
+                </a>
+                <button 
+                  onClick={handleCopyEmail} 
+                  onMouseEnter={() => setIsHovering(true)}
+                  onMouseLeave={() => setIsHovering(false)}
+                  className="min-w-[264px] border border-gray-400 rounded-full px-6 py-3 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+                    {copySuccess || (isHovering ? 'click to copy email!' : ' patelmudra2004@gmail.com ')}
+                </button>
+              </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-end gap-8">
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+              <div className="flex flex-wrap justify-center md:justify-start gap-6">
+                  <a href="https://github.com/mpatel26-0816" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
                       GITHUB
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+                  <a href="https://www.linkedin.com/in/mudra2004/" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
                       LINKEDIN
                   </a>
                   <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
                       RESUME
                   </a>
               </div>
-              <div className="text-center md:text-right text-xs text-[--muted-foreground]">
-                  <p>Design and developed by Mudra Patel <br/> </p>
+              <div className="text-center md:text-right text-xs text-[--muted-foreground] ${dmSans.className}">
+                  <p>Designed and developed by Mudra Patel <br/> </p>
                   <p>in Santa Clara, California</p>
               </div>
           </div>
