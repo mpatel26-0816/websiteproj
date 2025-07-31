@@ -17,13 +17,13 @@ const monst = Montserrat({
 const avegas = localFont({
   src: [
     {
-      path: '../../fonts/AvegasRoyale-italic.ttf',
+      path: '../fonts/AvegasRoyale-italic.ttf',
       weight:"400",
     },
-    {path: "../../fonts/AvegasRoyale-regular.ttf",
+    {path: "../fonts/AvegasRoyale-regular.ttf",
      weight: "700",
     },
-    {path: "../../fonts/AvegasRoyale-Bolditalic.ttf",
+    {path: "../fonts/AvegasRoyale-Bolditalic.ttf",
      weight: "700",
     },
   ],
