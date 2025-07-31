@@ -55,7 +55,7 @@ export default function Home() {
     <main className="relative">
       <section id="home" className="h-screen w-full relative snap-start">
 
-        <Image src="/landingpage.jpg" alt="background image" layout="fill" objectFit="cover" className="opacity-0 fade-in-image -z-10" quality={100} priority sizes="100vw "/>
+        <Image src="/landingpage.JPG" alt="background image" layout="fill" objectFit="cover" className="opacity-0 fade-in-image -z-10" quality={100} priority sizes="100vw "/>
         <div className={`opacity-0 animate-[fadeInRight_1s_ease-out_0.33s_forwards] absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/5 md:bottom-auto md:left-[calc(23.75%+20px)] md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0 ${monst.className}`}>
           <h1 className="hidden md:block text-6xl md:text-9xl font-extrabold leading-none">
           Mudra<br />
