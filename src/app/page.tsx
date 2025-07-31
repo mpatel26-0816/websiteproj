@@ -204,7 +204,7 @@ export default function Home() {
                   <a href="https://www.linkedin.com/in/mudra2004/" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
                       LINKEDIN
                   </a>
-                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+                  <a href="./Resume.pdf" target="_blank" rel="noopener noreferrer" className="border border-gray-400 rounded-full px-6 py-2 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
                       RESUME
                   </a>
               </div>
