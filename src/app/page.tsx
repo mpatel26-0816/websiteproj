@@ -18,13 +18,13 @@ const giazafont = giaza({
 const avegas = localFont({
   src: [
     {
-      path: '/fonts/AvegasRoyale-italic.ttf',
+      path: './fonts/AvegasRoyale-Italic.ttf',
       weight:"400",
     },
-    {path: "/fonts/AvegasRoyale-regular.ttf",
+    {path: "./fonts/AvegasRoyale-Regular.ttf",
      weight: "700",
     },
-    {path: "/fonts/AvegasRoyale-Bolditalic.ttf",
+    {path: "./fonts/AvegasRoyale-BoldItalic.ttf",
      weight: "700",
     },
   ],
