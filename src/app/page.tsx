@@ -57,22 +57,20 @@ export default function Home() {
 
         <Image src="/landingpage.JPG" alt="background image" layout="fill" objectFit="cover" className="opacity-0 fade-in-image -z-10" quality={100} priority sizes="100vw "/>
         <div className={`opacity-0 animate-[fadeInRight_1s_ease-out_0.33s_forwards] absolute top-1/5 left-1/2 -translate-x-1/2 w-full max-w-lg px-4 text-center text-white md:top-1/5 md:bottom-auto md:left-[calc(23.75%+20px)] md:-translate-x-5/12 md:text-left md:w-auto md:max-w-none md:px-0 ${monst.className}`}>
-          <h1 className="hidden md:block text-6xl md:text-9xl font-extrabold leading-none">
+          <h1 className={`${giazafont.className} hidden md:block text-6xl md:text-9xl font-extrabold leading-none`}>
           Mudra<br />
           Patel
           </h1>
-          <h1 className="block md:hidden text-3xl font-extrabold leading-none">
-          Mudra Patel  
-          </h1> 
+          <h1 className={`${giazafont.className} block md:hidden text-3xl font-extrabold leading-none`}> Mudra Patel </h1> 
         </div>
 
-        <div className={`opacity-0 animate-[fadeInLeft_1s_ease-out_0.46s_forwards] absolute top-1/4 left-1/2 -translate-x-1/2 w-11/12 text-center text-white md:top-auto md:left-11/20 md:bottom-15/48 md:right-20 md:w-auto md:translate-x-0 md:text-left ${monst.className}`}>
-        <p className="hidden md:block text-2xl font-extrabold">
+        <div className={`opacity-0 animate-[fadeInLeft_1s_ease-out_0.46s_forwards] absolute top-1/4 left-1/2 -translate-x-1/2 w-11/12 text-center text-white md:top-auto md:left-11/20 md:bottom-15/48 md:right-20 md:w-auto md:translate-x-0 md:text-left ${giazafont.className}`}>
+        <p className={` ${giazafont.className} hidden md:block text-2xl font-extrabold`}>
             The world is full of data, <br />
             Let's make it speak.
           </p>
           <p className="block md:hidden text-base font-bold">
-            Personal Statement Undecided something tech
+            The world if full of data, let's make it speak. 
           </p>
         </div>
 
