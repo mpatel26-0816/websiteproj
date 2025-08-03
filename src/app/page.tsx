@@ -126,10 +126,10 @@ export default function Home() {
                 <div className="bg-stone-600 h-80 w-full mb-4"></div>
                 <div>
                   <h3 className="font-bold text-lg uppercase text-[--foreground]">
-                    Name and title of project
+                    Near-Earth Object 3D Visualizer
                   </h3>
                   <p className="text-base text-[--muted-foreground]">
-                    This will be the description of the project, could be few sentences
+                    Interactable web-app coming soon!
                   </p>
                 </div>
               </div>
@@ -139,10 +139,10 @@ export default function Home() {
               <div className="bg-stone-500 h-80 w-full mb-4 rounded-md"></div>
               <div>
                 <h3 className="font-bold text-lg uppercase text-[--foreground]">
-                  Name and title of project
+                  Project 2
                 </h3>
                 <p className="text-base text-[--muted-foreground]">
-                  This will be the description of the project, could be few sentences
+                Coming soon, check back at the end of summer!
                 </p>
               </div>
             </div>
@@ -151,10 +151,10 @@ export default function Home() {
               <div className="bg-stone-400 h-80 w-full mb-4"></div>
               <div>
                 <h3 className="font-bold text-lg uppercase text-[--foreground] ${dmSans.className}">
-                  Name and title of project
+                  Project 3
                 </h3>
                 <p className="text-base text-[--muted-foreground]">
-                  This will be the description of the project, could be few sentences
+                  Coming soon, check back at the end of summer!
                 </p>
               </div>
             </div>
