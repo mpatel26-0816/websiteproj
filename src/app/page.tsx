@@ -45,7 +45,7 @@ export default function Home() {
   const [isHovering, setIsHovering] = useState(false);
   const [copySuccess, setCopySuccess] = useState('');
   const handleCopyEmail = () => {
-    const email = 'patelmudra2004@gmai.com';
+    const email = 'patelmudra2004@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
       setCopySuccess('copied to clipboard!');
       setTimeout(() => setCopySuccess(''), 2000);
@@ -182,7 +182,7 @@ export default function Home() {
                   Let's Talk
               </h2>
               <div className="mt-12 flex justify-center items-center gap-5 relative">
-                <a href="tel:123-456-7890" className="border border-gray-400 rounded-full px-6 py-3 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
+                <a href="tel:408-747-7179" className="border border-gray-400 rounded-full px-6 py-3 text-sm font-semibold text-[--muted-foreground] transition-all duration-300 ease-in-out hover:bg-[--foreground] hover:text-[--background] hover:border-[--foreground] hover:-translate-y-1 hover:shadow-lg">
                   (408) 747-7179
                 </a>
                 <button 
